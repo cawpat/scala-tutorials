@@ -453,10 +453,11 @@ lazy val scala3_lang_3 = (project in file("scala3-lang-3")).settings(
   scalaVersion := scala3Version
 )
 
-lazy val scala3_lang_collections = (project in file("scala3-lang-collections")).settings(
-  libraryDependencies ++= scalaTestDeps,
-  scalaVersion := scala3Version
-)
+lazy val scala3_lang_collections =
+  (project in file("scala3-lang-collections")).settings(
+    libraryDependencies ++= scalaTestDeps,
+    scalaVersion := scala3Version
+  )
 
 lazy val cats_effects = (project in file("cats-effects"))
   .settings(
@@ -478,8 +479,8 @@ lazy val zio = (project in file("zio"))
 lazy val doobie = (project in file("doobie"))
   .settings(
     name := "doobie",
-    libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2",
-    libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+    libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC5",
+    libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC5"
   )
 
 // Scala Native Project is disabled as it needs clang to installed in the target machine.
