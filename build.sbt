@@ -10,7 +10,7 @@ val catsEffect = "org.typelevel" %% "cats-effect" % "3.5.2"
 val catEffectTest = "org.typelevel" %% "cats-effect-testkit" % "3.5.2" % Test
 val scalaReflection = "org.scala-lang" % "scala-reflect" % scalaV
 val logback = "ch.qos.logback" % "logback-classic" % "1.4.11"
-val embedMongoVersion = "4.10.1"
+val embedMongoVersion = "4.10.2"
 
 val scalaTestDeps = Seq(
   "org.scalatest" %% "scalatest" % "3.2.17" % Test,
@@ -453,10 +453,11 @@ lazy val scala3_lang_3 = (project in file("scala3-lang-3")).settings(
   scalaVersion := scala3Version
 )
 
-lazy val scala3_lang_collections = (project in file("scala3-lang-collections")).settings(
-  libraryDependencies ++= scalaTestDeps,
-  scalaVersion := scala3Version
-)
+lazy val scala3_lang_collections =
+  (project in file("scala3-lang-collections")).settings(
+    libraryDependencies ++= scalaTestDeps,
+    scalaVersion := scala3Version
+  )
 
 lazy val cats_effects = (project in file("cats-effects"))
   .settings(
