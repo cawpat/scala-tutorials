@@ -363,7 +363,7 @@ lazy val scala_libraries_4 = (project in file("scala-libraries-4"))
     libraryDependencies ++= Seq(
       "com.clever-cloud.pulsar4s" %% "pulsar4s-core" % "2.9.0",
       "com.clever-cloud.pulsar4s" %% "pulsar4s-jackson" % "2.9.0",
-      "org.testcontainers" % "pulsar" % "1.19.1" % IntegrationTest
+      "org.testcontainers" % "pulsar" % "1.19.3" % IntegrationTest
     ),
     libraryDependencies ++= Seq(
       "software.amazon.awssdk" % "s3" % "2.21.21"
@@ -453,10 +453,11 @@ lazy val scala3_lang_3 = (project in file("scala3-lang-3")).settings(
   scalaVersion := scala3Version
 )
 
-lazy val scala3_lang_collections = (project in file("scala3-lang-collections")).settings(
-  libraryDependencies ++= scalaTestDeps,
-  scalaVersion := scala3Version
-)
+lazy val scala3_lang_collections =
+  (project in file("scala3-lang-collections")).settings(
+    libraryDependencies ++= scalaTestDeps,
+    scalaVersion := scala3Version
+  )
 
 lazy val cats_effects = (project in file("cats-effects"))
   .settings(
