@@ -9,7 +9,7 @@ val jUnitInterface = "com.github.sbt" % "junit-interface" % "0.13.3" % "test"
 val catsEffect = "org.typelevel" %% "cats-effect" % "3.5.2"
 val catEffectTest = "org.typelevel" %% "cats-effect-testkit" % "3.5.2" % Test
 val scalaReflection = "org.scala-lang" % "scala-reflect" % scalaV
-val logback = "ch.qos.logback" % "logback-classic" % "1.4.11"
+val logback = "ch.qos.logback" % "logback-classic" % "1.4.12"
 val embedMongoVersion = "4.10.1"
 
 val scalaTestDeps = Seq(
@@ -453,10 +453,11 @@ lazy val scala3_lang_3 = (project in file("scala3-lang-3")).settings(
   scalaVersion := scala3Version
 )
 
-lazy val scala3_lang_collections = (project in file("scala3-lang-collections")).settings(
-  libraryDependencies ++= scalaTestDeps,
-  scalaVersion := scala3Version
-)
+lazy val scala3_lang_collections =
+  (project in file("scala3-lang-collections")).settings(
+    libraryDependencies ++= scalaTestDeps,
+    scalaVersion := scala3Version
+  )
 
 lazy val cats_effects = (project in file("cats-effects"))
   .settings(
