@@ -10,7 +10,7 @@ addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.9.0")
 addSbtPlugin("com.typesafe.play" % "sbt-twirl" % "1.6.2")
 addSbtPlugin("com.earldouglas" % "xsbt-web-plugin" % "4.2.1")
 
-addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.3")
+addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.7")
 libraryDependencies += "org.scala-js" %% "scalajs-env-jsdom-nodejs" % "1.0.0"
 
 resolvers += Resolver.jcenterRepo
