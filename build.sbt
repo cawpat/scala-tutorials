@@ -384,7 +384,7 @@ lazy val scala_libraries_4 = (project in file("scala-libraries-4"))
 val spireVersion = "0.18.0"
 val kafkaVersion = "7.5.2-ce"
 val pureconfigVersion = "0.17.4"
-val jackSonVersion = "2.15.3"
+val jackSonVersion = "2.16.1"
 val log4jApiScalaVersion = "13.0.0"
 val log4jVersion = "2.20.0"
 val avro4sVersion = "4.1.1"
@@ -453,10 +453,11 @@ lazy val scala3_lang_3 = (project in file("scala3-lang-3")).settings(
   scalaVersion := scala3Version
 )
 
-lazy val scala3_lang_collections = (project in file("scala3-lang-collections")).settings(
-  libraryDependencies ++= scalaTestDeps,
-  scalaVersion := scala3Version
-)
+lazy val scala3_lang_collections =
+  (project in file("scala3-lang-collections")).settings(
+    libraryDependencies ++= scalaTestDeps,
+    scalaVersion := scala3Version
+  )
 
 lazy val cats_effects = (project in file("cats-effects"))
   .settings(
