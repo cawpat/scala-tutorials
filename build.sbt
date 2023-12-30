@@ -388,7 +388,7 @@ val jackSonVersion = "2.15.3"
 val log4jApiScalaVersion = "13.0.0"
 val log4jVersion = "2.20.0"
 val avro4sVersion = "4.1.1"
-val kafkaAvroSerializer = "7.5.2"
+val kafkaAvroSerializer = "7.5.3"
 
 lazy val scala_libraries_5 = (project in file("scala-libraries-5"))
   .settings(
@@ -453,10 +453,11 @@ lazy val scala3_lang_3 = (project in file("scala3-lang-3")).settings(
   scalaVersion := scala3Version
 )
 
-lazy val scala3_lang_collections = (project in file("scala3-lang-collections")).settings(
-  libraryDependencies ++= scalaTestDeps,
-  scalaVersion := scala3Version
-)
+lazy val scala3_lang_collections =
+  (project in file("scala3-lang-collections")).settings(
+    libraryDependencies ++= scalaTestDeps,
+    scalaVersion := scala3Version
+  )
 
 lazy val cats_effects = (project in file("cats-effects"))
   .settings(
