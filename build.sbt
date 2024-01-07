@@ -350,7 +350,6 @@ lazy val scala_libraries_2 = (project in file("scala-libraries-2"))
     Defaults.itSettings
   )
 
-
 val http4sBlaze = "0.23.16"
 val http4sVersion = "0.23.25"
 val osLibVersion = "0.9.3"
@@ -532,8 +531,8 @@ lazy val zio = (project in file("zio"))
     libraryDependencies ++= Seq(
       "dev.zio" %% "zio-json" % "0.6.2",
       "dev.zio" %% "zio-http" % "3.0.0-RC2",
-      "io.getquill" %% "quill-zio" % "4.6.0",
-      "io.getquill" %% "quill-jdbc-zio" % "4.6.0",
+      "io.getquill" %% "quill-zio" % "4.6.0.1",
+      "io.getquill" %% "quill-jdbc-zio" % "4.6.0.1",
       "com.h2database" % "h2" % "2.2.220"
     ),
     libraryDependencies ++= Seq(
