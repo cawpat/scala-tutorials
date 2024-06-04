@@ -618,7 +618,7 @@ lazy val cats_effects = (project in file("cats-effects"))
     libraryDependencies += "junit" % "junit" % "4.13.2" % Test
   )
 
-val zioJsonDep = "dev.zio" %% "zio-json" % "0.6.2"
+val zioJsonDep = "dev.zio" %% "zio-json" % "0.7.0"
 val zioTestSbt = "dev.zio" %% "zio-test-sbt" % zioVersion % Test
 
 lazy val zio = (project in file("zio"))
