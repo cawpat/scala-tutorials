@@ -384,7 +384,7 @@ lazy val scala2_libraries =
       Defaults.itSettings
     )
 
-val circeVersion = "0.14.7"
+val circeVersion = "0.14.9"
 val monixVersion = "3.4.1"
 val elastic4sVersion = "8.12.0"
 val sparkVersion = "3.5.1"
